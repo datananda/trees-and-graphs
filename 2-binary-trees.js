@@ -44,6 +44,14 @@ class BinaryTree {
 
   return arr;
   }
+
+  contains(value) {
+    if (this.value === value) return true;
+    if (this.left) this.left.contains(value);
+    if (this.right) this.right.contains(value);
+
+    return false;
+  }
 }
 
 // let myBT = new BinaryTree(1);
